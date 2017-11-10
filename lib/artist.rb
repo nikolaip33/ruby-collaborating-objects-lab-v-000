@@ -64,7 +64,7 @@ class Artist
     def add_song(song)
         @songs << song unless @songs.include?(song)
     end
-    
+
     def save
        @@all << self
     end
@@ -72,13 +72,13 @@ class Artist
     def self.find_or_create_by_name(name)
         if artist = @@all.find {|artist| artist.name = name}
             artist
-        else 
-            self.new(name).save 
+        else
+            self.new(name).save
         end
     end
 
     def print_songs
-        self.songs.each {|song| puts song.name }       
+        self.songs.each {|song| puts song.name }
     end
     # binding.pry
 end
