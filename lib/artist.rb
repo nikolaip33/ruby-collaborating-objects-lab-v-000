@@ -73,7 +73,7 @@ class Artist
         if artist = @@all.find {|artist| artist.name == name}
             artist
         else
-            self.new(name).save.last
+            self.new(name).save[-1]
         end
     end
 
