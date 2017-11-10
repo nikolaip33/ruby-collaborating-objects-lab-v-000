@@ -62,8 +62,7 @@ class Artist
     end
 
     def add_song(song)
-        @songs << song unless @songs.include?(song)
-        self.songs
+        @songs << song
     end
 
     def save
